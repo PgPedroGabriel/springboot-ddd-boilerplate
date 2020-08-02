@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/session")
-public class Session {
+public class SessionRestController {
 
     @Autowired
     private SessionProvider sessionProvider;

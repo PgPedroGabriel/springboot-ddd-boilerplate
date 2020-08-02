@@ -4,6 +4,7 @@ import com.example.authenticationsample.domain.user.exceptions.UserInvalidEmail;
 import com.example.authenticationsample.domain.user.exceptions.UserNotFound;
 import com.example.authenticationsample.domain.user.models.User;
 import com.example.authenticationsample.infra.database.postgres.repositories.IUserRepository;
+import com.example.authenticationsample.infra.http.dtos.user.CreateUserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

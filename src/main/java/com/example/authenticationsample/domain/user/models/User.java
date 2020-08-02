@@ -1,6 +1,7 @@
 package com.example.authenticationsample.domain.user.models;
 
 import com.example.authenticationsample.infra.libraries.password.PasswordProvider;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -27,7 +28,6 @@ public class User implements Serializable {
     @Column
     private String name;
 
-
     @Transient
     private String plainPassword;
 
@@ -42,6 +42,7 @@ public class User implements Serializable {
         this.password = PasswordProvider.hash(password);
     }
 
+    @JsonIgnore
     public String getPlainPassword() {
         return this.plainPassword;
     }
@@ -67,6 +68,7 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    @JsonIgnore
     public String getPassword() {
         return password;
     }
